@@ -1,71 +1,52 @@
-<<<<<<< HEAD
-# CampusHub — screenshot-based student portal prototype
+# 🎓 CampusHub – Student Portal & Career Management System
 
-This project follows the supplied reference screenshots:
-- Public landing page: white background, orange highlights, two-column hero and metrics.
-- Student dashboard: compact top navigation, welcome row, career cards and LMS panel.
-- Login page: split layout, illustration panel on the left and orange-topped sign-in card on the right.
-- Uses the uploaded TejTech logo for branding.
+CampusHub is a centralized web-based platform designed to simplify student management, academic activities, and career development. It connects students and administrators through an interactive portal, providing easy access to job opportunities, applications, assessments, performance tracking, courses, and complementary classes.
 
-## Run (Windows PowerShell)
-```powershell
-npm install
-npm run dev
-```
-Open the localhost URL printed by Vite.
+## 🚀 Key Features
 
-## Run the backend
-In a second PowerShell terminal:
-```powershell
-Set-Location src\server
-if (!(Test-Path .env)) { Copy-Item .env.example .env }
-npm install
-npm start
-```
-Set the MySQL connection and `JWT_SECRET` values in `src/server/.env`. To
-provision an administrator, set `ADMIN_USERNAME` and a 12–128 character
-`ADMIN_PASSWORD` there, then run `npm run create-admin` from `src/server` once.
-This creates the `admin_users` table if needed and stores a bcrypt password
-hash. The MySQL database must also contain the student `users` table with `id`,
-nullable `name`, unique `email`, and `password_hash` columns. The API listens on
-port `5000` by default; `/api/health` checks its database connection. Run your
-`job_openings` table SQL in the configured `campushub` database. The Careers
-page lists published rows from that table, while `/admin/jobs` shows all rows
-and their application counts. Applications are stored in a `job_applications`
-table that the backend creates on the first successful submission; each
-submission also increments `job_openings.applications`.
+### 👨‍🎓 Student Portal
+- Student authentication and personalized dashboard.
+- Browse recent job openings and career opportunities.
+- Apply for jobs and track application status.
+- Attend online assessments and practice tests.
+- Track academic performance and progress.
+- Access purchased courses and complementary classes.
+- Explore mentorship opportunities.
+- Refer & Earn functionality.
 
-### Configure Code Practice
-The Code Practice page uses Monaco Editor and runs C++17, Java, Python 3, and
-JavaScript submissions through a Judge0-compatible service. Set
-`JUDGE0_API_URL` in `src/server/.env` to the service base URL. For a RapidAPI
-subscription, also set `JUDGE0_API_KEY` and `JUDGE0_API_HOST` there. For a
-self-hosted Judge0 instance, use its base URL and leave the key/host blank.
-The backend environment template is `src/server/.env.example`.
-Never put Judge0 credentials in a `VITE_` variable; the Express server keeps
-them out of browser code. Restart the backend after changing the configuration.
-Code Practice includes 30 questions (10 per difficulty), sample runs, full
-test submissions, and standard-library autocomplete. The runner limits each IP
-to 20 runs per minute.
+### 🛡️ Admin Dashboard
+- Dedicated administrator authentication.
+- Dashboard with student statistics and platform overview.
+- Add, update, and delete student records.
+- Manage job openings and descriptions.
+- Publish new job opportunities.
+- Manage student applications and platform activities.
 
-## Build
-```powershell
-npm run build
-```
+## 🛠️ Tech Stack
 
-## Structure
-`src/components` contains reusable navigation, cards and layout pieces.
-`src/pages` contains individual routed pages.
-`src/data/demoData.js` contains clearly-labelled prototype data.
-`src/context/ThemeContext.jsx` provides theme switching.
-`src/firebase.js` is a safe optional Firebase initialization point.
+- **Frontend:** React.js, Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router DOM
+- **Icons:** Lucide React
+- **Backend:** Node.js, Express.js
+- **Database:** MySQL
+- **Authentication:** Role-based authentication
 
-## Notes
-Login and registration use the local Express/MySQL backend. Firebase variables
-are placeholders; add your own Firebase project credentials before enabling
-Firebase authentication or Firestore. Some dashboard sections still use
-prototype data.
-=======
-# CampusHub
-CampusHub – A centralized student management and career development platform built with React, Tailwind CSS, Node.js, Express.js, and MySQL. Manage student profiles, job opportunities, applications, assessments, performance, courses, and campus activities through dedicated student and admin dashboards.
->>>>>>> 1fa4af941d6aef061c8582d9184d005dbbe06951
+## 🎯 Project Objective
+
+To develop a unified digital platform that bridges the gap between students, academic resources, and career opportunities while simplifying administrative operations.
+
+## 🔮 Future Enhancements
+- Real-time notifications.
+- Resume builder and profile management.
+- Advanced analytics and performance reports.
+- Automated placement updates.
+- AI-powered career recommendations.
+
+## 👨‍💻 Developer
+
+Developed as a student-focused web application to enhance campus management and career development.
+
+**Project Name:** CampusHub
+
+**Status:** Under Development
