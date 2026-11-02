@@ -50,3 +50,7 @@ Developed as a student-focused web application to enhance campus management and 
 **Project Name:** CampusHub
 
 **Status:** Under Development
+
+**Images**
+<img width="1518" height="717" alt="image" src="https://github.com/user-attachments/assets/96fac263-38aa-4116-a679-6f771790403f" />
+
