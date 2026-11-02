@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CampusHub — screenshot-based student portal prototype
 
 This project follows the supplied reference screenshots:
@@ -64,3 +65,7 @@ Login and registration use the local Express/MySQL backend. Firebase variables
 are placeholders; add your own Firebase project credentials before enabling
 Firebase authentication or Firestore. Some dashboard sections still use
 prototype data.
+=======
+# CampusHub
+CampusHub – A centralized student management and career development platform built with React, Tailwind CSS, Node.js, Express.js, and MySQL. Manage student profiles, job opportunities, applications, assessments, performance, courses, and campus activities through dedicated student and admin dashboards.
+>>>>>>> 1fa4af941d6aef061c8582d9184d005dbbe06951
