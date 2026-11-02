@@ -1,0 +1,63 @@
+.course-certificate-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  color: #166534;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.course-certificate-button:hover {
+  transform: translateY(-1px);
+  border-color: #86efac;
+  box-shadow: 0 5px 14px rgb(22 101 52 / 12%);
+}
+
+.course-certificate-button:focus-visible {
+  outline: 3px solid rgb(34 197 94 / 35%);
+  outline-offset: 2px;
+}
+
+.course-certificate-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 10px;
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.course-certificate-copy {
+  display: grid;
+  flex: 1;
+  gap: 2px;
+}
+
+.course-certificate-copy strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.course-certificate-copy small {
+  color: #4b7c5b;
+  font-size: 10px;
+}
+
+.course-certificate-download {
+  flex: 0 0 auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-certificate-button {
+    transition: none;
+  }
+}

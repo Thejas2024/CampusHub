@@ -1,0 +1,1052 @@
+.code-practice-shell {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  max-width: none;
+  flex-direction: column;
+  overflow: hidden;
+  background: #0f1724;
+  color: #e6edf7;
+}
+
+.code-practice-header,
+.code-practice-toolbar,
+.code-editor-toolbar,
+.code-results-header,
+.code-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.code-practice-header {
+  min-height: 58px;
+  padding: 10px 18px;
+  border-bottom: 1px solid #263449;
+  background: #111c2c;
+}
+
+.code-practice-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.code-practice-brand > span {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border-radius: 10px;
+  background: #ff69001c;
+  color: #ff8a3d;
+}
+
+.code-practice-brand div {
+  display: grid;
+  gap: 2px;
+}
+
+.code-practice-brand strong {
+  font-size: 13px;
+}
+
+.code-practice-brand small,
+.code-practice-status {
+  color: #93a2b8;
+  font-size: 11px;
+}
+
+.code-back-to-questions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 7px 10px;
+  border: 1px solid #334259;
+  border-radius: 7px;
+  background: #1c293b;
+  color: #d7e0ec;
+  font-size: 11px;
+}
+
+.code-back-to-questions:hover {
+  border-color: #ef6b22;
+  color: #ffae73;
+}
+
+.code-practice-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.runner-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+
+.runner-dot.online {
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e80;
+}
+
+.code-practice-toolbar {
+  min-height: 55px;
+  padding: 8px 16px;
+  border-bottom: 1px solid #263449;
+  background: #111c2c;
+}
+
+.difficulty-tabs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.difficulty-tabs button,
+.code-panel-tabs button,
+.code-results-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #a7b5ca;
+  font-size: 12px;
+}
+
+.difficulty-tabs button {
+  padding: 7px 10px;
+}
+
+.difficulty-tabs button span {
+  display: grid;
+  min-width: 19px;
+  height: 19px;
+  place-items: center;
+  border-radius: 20px;
+  background: #253248;
+  color: #b7c4d6;
+  font-size: 10px;
+}
+
+.difficulty-tabs button.active,
+.code-panel-tabs button.selected,
+.code-results-tabs button.selected {
+  background: #253248;
+  color: #fff;
+}
+
+.code-question-select,
+.code-editor-toolbar label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a7b5ca;
+}
+
+.code-question-select select,
+.code-editor-toolbar select {
+  max-width: 310px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #e6edf7;
+  font-size: 12px;
+}
+
+.code-question-select option,
+.code-editor-toolbar option {
+  background: #111c2c;
+}
+
+.code-practice-workspace {
+  display: grid;
+  min-height: 0;
+  flex: 1;
+  grid-template-columns: minmax(290px, 0.83fr) minmax(400px, 1.17fr);
+}
+
+.code-problem-panel {
+  min-width: 0;
+  overflow: auto;
+  border-right: 1px solid #263449;
+}
+
+.code-panel-tabs {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  gap: 6px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #263449;
+  background: #111c2c;
+}
+
+.code-panel-tabs button {
+  padding: 7px 10px;
+}
+
+.code-problem-content {
+  padding: 18px;
+}
+
+.code-problem-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.code-problem-title h1,
+.code-problem-content > h1 {
+  margin: 0;
+  color: #f5f7fb;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.difficulty-badge {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.difficulty-badge.easy {
+  background: #163d32;
+  color: #54d6a0;
+}
+
+.difficulty-badge.medium {
+  background: #443821;
+  color: #f2c45e;
+}
+
+.difficulty-badge.hard {
+  background: #482831;
+  color: #fb8290;
+}
+
+.code-topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 17px;
+}
+
+.code-topic-list span {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #202c3d;
+  color: #aebbd0;
+  font-size: 10px;
+}
+
+.code-problem-content > p,
+.code-editor-note p {
+  color: #bac5d5;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.code-problem-content > h2 {
+  margin: 19px 0 7px;
+  color: #e7edf7;
+  font-size: 13px;
+}
+
+.code-problem-content > p code {
+  border-radius: 5px;
+  background: #202c3d;
+  padding: 3px 6px;
+  color: #cbd5e1;
+}
+
+.code-example {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 11px;
+  border: 1px solid #29374a;
+  border-radius: 9px;
+  background: #131e2d;
+}
+
+.code-example strong,
+.code-sample-cases strong {
+  color: #dde6f3;
+  font-size: 11px;
+}
+
+.code-example div {
+  display: grid;
+  gap: 5px;
+}
+
+.code-example div > span,
+.code-sample-cases > div > span {
+  color: #93a2b8;
+  font-size: 10px;
+}
+
+.code-example pre {
+  overflow: auto;
+  margin: 0;
+  color: #c9d5e5;
+  font: 11px/1.6 Consolas, monospace;
+  white-space: pre-wrap;
+}
+
+.code-library-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+  color: #bfccdc;
+  font-size: 12px;
+}
+
+.code-library-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.code-library-list svg {
+  color: #55ce92;
+}
+
+.code-editor-note {
+  margin-top: 22px;
+  padding: 12px;
+  border: 1px solid #29374a;
+  border-radius: 9px;
+  background: #131e2d;
+}
+
+.code-editor-note strong {
+  font-size: 12px;
+}
+
+.code-editor-note p {
+  margin-bottom: 0;
+}
+
+.code-editor-panel {
+  display: flex;
+  min-width: 0;
+  min-height: 680px;
+  flex-direction: column;
+  background: #0d1420;
+}
+
+.code-editor-toolbar {
+  min-height: 44px;
+  padding: 6px 12px;
+  border-bottom: 1px solid #263449;
+  background: #111c2c;
+}
+
+.code-editor-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  color: #a7b5ca;
+  font-size: 11px;
+}
+
+.monaco-editor-wrap {
+  min-height: 300px;
+  flex: 1 1 360px;
+}
+
+.code-library-bar {
+  padding: 8px 12px;
+  border-top: 1px solid #263449;
+  border-bottom: 1px solid #263449;
+  background: #111c2c;
+}
+
+.code-library-bar > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #b8c5d7;
+  font-size: 11px;
+}
+
+.code-library-bar .rotated {
+  transform: rotate(180deg);
+}
+
+.code-library-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 9px;
+}
+
+.code-library-chips span {
+  padding: 4px 7px;
+  border: 1px solid #29374a;
+  border-radius: 5px;
+  color: #9eacc1;
+  font-size: 9px;
+}
+
+.code-results-panel {
+  min-height: 155px;
+  max-height: 260px;
+  overflow: auto;
+  background: #0f1724;
+}
+
+.code-results-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  min-height: 42px;
+  padding: 5px 12px;
+  border-bottom: 1px solid #263449;
+  background: #111c2c;
+}
+
+.code-results-tabs {
+  display: flex;
+  gap: 5px;
+}
+
+.code-results-tabs button {
+  padding: 7px 9px;
+  font-size: 10px;
+}
+
+.code-results-header > span,
+.code-action-bar > span {
+  color: #7f8ea5;
+  font-size: 10px;
+}
+
+.code-sample-cases {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px;
+}
+
+.code-sample-cases > div {
+  display: grid;
+  min-width: min(185px, 100%);
+  gap: 7px;
+  padding: 10px;
+  border: 1px solid #263449;
+  border-radius: 8px;
+}
+
+.code-sample-cases code {
+  color: #b9c9de;
+  font: 10px Consolas, monospace;
+}
+
+.code-results-placeholder {
+  padding: 15px;
+  color: #8392a8;
+  font-size: 11px;
+}
+
+.code-run-results {
+  padding: 10px 12px;
+}
+
+.code-verdict {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.code-verdict strong {
+  margin-left: auto;
+}
+
+.code-verdict.accepted {
+  background: #123626;
+  color: #59d398;
+}
+
+.code-verdict.failed {
+  background: #3a2027;
+  color: #fb8492;
+}
+
+.code-test-result {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 3px;
+  border-bottom: 1px solid #263449;
+  color: #9eacc1;
+  font-size: 10px;
+}
+
+.code-test-result > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.code-test-result .passed {
+  color: #59d398;
+}
+
+.code-test-result .failed,
+.code-test-result > strong {
+  color: #fb8492;
+}
+
+.code-test-result pre {
+  grid-column: 1 / -1;
+  overflow: auto;
+  max-height: 70px;
+  margin: 0;
+  padding: 7px;
+  border-radius: 6px;
+  background: #131e2d;
+  color: #c5d0df;
+  white-space: pre-wrap;
+}
+
+.code-execution-error {
+  margin: 0 12px 10px;
+  color: #fb8492;
+  font-size: 11px;
+}
+
+.code-action-bar {
+  min-height: 52px;
+  padding: 7px 12px;
+  border-top: 1px solid #263449;
+  background: #111c2c;
+}
+
+.code-action-bar > div {
+  display: flex;
+  gap: 8px;
+}
+
+.code-action-bar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid #334259;
+  border-radius: 7px;
+  background: #1c293b;
+  color: #d7e0ec;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.code-action-bar .code-submit-button {
+  border-color: #ef6b22;
+  background: #f36b21;
+  color: white;
+}
+
+.code-action-bar button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.spin {
+  animation: code-spin 1s linear infinite;
+}
+
+@keyframes code-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 850px) {
+  .code-practice-shell {
+    min-height: 100vh;
+  }
+
+  .code-practice-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .code-practice-shell.light {
+    border-color: #e2e8f0;
+    background: #f8fafc;
+    color: #1e293b;
+  }
+
+  .code-practice-shell.light .code-practice-header,
+  .code-practice-shell.light .code-practice-toolbar,
+  .code-practice-shell.light .code-panel-tabs,
+  .code-practice-shell.light .code-editor-toolbar,
+  .code-practice-shell.light .code-library-bar,
+  .code-practice-shell.light .code-results-header,
+  .code-practice-shell.light .code-action-bar {
+    border-color: #dce3ec;
+    background: #fff;
+  }
+
+  .code-practice-shell.light .code-practice-brand strong,
+  .code-practice-shell.light .code-problem-title h1,
+  .code-practice-shell.light .code-problem-content > h1,
+  .code-practice-shell.light .code-problem-content > h2,
+  .code-practice-shell.light .code-example strong,
+  .code-practice-shell.light .code-sample-cases strong,
+  .code-practice-shell.light .code-editor-note strong {
+    color: #172033;
+  }
+
+  .code-practice-shell.light .code-practice-brand small,
+  .code-practice-shell.light .code-practice-status,
+  .code-practice-shell.light .difficulty-tabs button,
+  .code-practice-shell.light .code-panel-tabs button,
+  .code-practice-shell.light .code-results-tabs button,
+  .code-practice-shell.light .code-question-select,
+  .code-practice-shell.light .code-editor-toolbar label,
+  .code-practice-shell.light .code-editor-toolbar button,
+  .code-practice-shell.light .code-library-bar > button {
+    color: #64748b;
+  }
+
+  .code-practice-shell.light .difficulty-tabs button.active,
+  .code-practice-shell.light .code-panel-tabs button.selected,
+  .code-practice-shell.light .code-results-tabs button.selected {
+    background: #fff1e6;
+    color: #c94d00;
+  }
+
+  .code-practice-shell.light .difficulty-tabs button span {
+    background: #f1f5f9;
+    color: #64748b;
+  }
+
+  .code-practice-shell.light .code-question-select select,
+  .code-practice-shell.light .code-editor-toolbar select {
+    color: #1e293b;
+  }
+
+  .code-practice-shell.light .code-question-select option,
+  .code-practice-shell.light .code-editor-toolbar option {
+    background: #fff;
+  }
+
+  .code-practice-shell.light .code-practice-workspace,
+  .code-practice-shell.light .code-problem-panel {
+    border-color: #dce3ec;
+  }
+
+  .code-practice-shell.light .code-problem-panel,
+  .code-practice-shell.light .code-results-panel,
+  .code-practice-shell.light .code-editor-panel {
+    background: #f8fafc;
+  }
+
+  .code-practice-shell.light .code-topic-list span,
+  .code-practice-shell.light .code-problem-content > p code {
+    background: #eef2f7;
+    color: #475569;
+  }
+
+  .code-practice-shell.light .code-problem-content > p,
+  .code-practice-shell.light .code-editor-note p {
+    color: #475569;
+  }
+
+  .code-practice-shell.light .code-example,
+  .code-practice-shell.light .code-editor-note,
+  .code-practice-shell.light .code-test-result pre {
+    border-color: #dce3ec;
+    background: #fff;
+  }
+
+  .code-practice-shell.light .code-example pre,
+  .code-practice-shell.light .code-sample-cases code,
+  .code-practice-shell.light .code-test-result pre {
+    color: #334155;
+  }
+
+  .code-practice-shell.light .code-library-chips span,
+  .code-practice-shell.light .code-sample-cases > div,
+  .code-practice-shell.light .code-test-result {
+    border-color: #dce3ec;
+    color: #475569;
+  }
+
+  .code-practice-shell.light .code-results-header > span,
+  .code-practice-shell.light .code-action-bar > span,
+  .code-practice-shell.light .code-sample-cases > div > span,
+  .code-practice-shell.light .code-results-placeholder {
+    color: #64748b;
+  }
+
+  .code-practice-shell.light .code-action-bar button,
+  .code-practice-shell.light .code-back-to-questions,
+  .code-practice-shell.light .code-theme-toggle {
+    border-color: #dce3ec;
+    background: #f8fafc;
+    color: #334155;
+  }
+
+  .code-practice-shell.light .code-back-to-questions:hover,
+  .code-practice-shell.light .code-theme-toggle:hover {
+    border-color: #fdba74;
+    color: #c94d00;
+  }
+
+  .code-practice-shell.light .code-action-bar .code-submit-button {
+    border-color: #ef6b22;
+    background: #f36b21;
+    color: #fff;
+  }
+
+  .code-practice-shell.light .code-verdict.accepted {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  .code-practice-shell.light .code-verdict.failed {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  .code-practice-shell.light .code-test-result .failed,
+  .code-practice-shell.light .code-test-result > strong,
+  .code-practice-shell.light .code-execution-error {
+    color: #b91c1c;
+  }
+
+  @media (max-width: 520px) {
+    .code-practice-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    .code-back-to-questions {
+      grid-column: 1;
+      grid-row: 2;
+      margin-left: 0;
+    }
+
+    .code-theme-toggle {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .code-practice-status {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+    }
+  }
+
+  .code-problem-panel {
+    max-height: 44vh;
+    border-right: 0;
+    border-bottom: 1px solid #263449;
+  }
+
+  .code-editor-panel {
+    min-height: 680px;
+  }
+}
+
+@media (max-width: 520px) {
+  .code-practice-header,
+  .code-practice-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .code-practice-toolbar {
+    gap: 10px;
+  }
+
+  .code-question-select,
+  .code-question-select select {
+    max-width: 100%;
+  }
+
+  .code-practice-status {
+    align-self: flex-end;
+  }
+}
+
+.code-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border: 1px solid #334259;
+  border-radius: 7px;
+  background: #1c293b;
+  color: #d7e0ec;
+  font-size: 11px;
+}
+
+.code-theme-toggle:hover {
+  border-color: #ef6b22;
+  color: #ffae73;
+}
+
+.code-practice-shell.light {
+  background: #f5f8fd;
+  color: #1d2c42;
+}
+
+.code-practice-shell.light .code-practice-header,
+.code-practice-shell.light .code-practice-toolbar,
+.code-practice-shell.light .code-panel-tabs,
+.code-practice-shell.light .code-editor-toolbar,
+.code-practice-shell.light .code-library-bar,
+.code-practice-shell.light .code-results-header,
+.code-practice-shell.light .code-action-bar {
+  border-color: #e2eaf4;
+  background: #fff;
+}
+
+.code-practice-shell.light .code-practice-header {
+  min-height: 64px;
+  padding: 10px 22px;
+  box-shadow: 0 2px 10px rgb(40 73 111 / 4%);
+}
+
+.code-practice-shell.light .code-practice-brand > span {
+  background: #e7f2ff;
+  color: #397ac4;
+}
+
+.code-practice-shell.light .code-practice-brand strong,
+.code-practice-shell.light .code-problem-title h1,
+.code-practice-shell.light .code-problem-content > h1,
+.code-practice-shell.light .code-problem-content > h2,
+.code-practice-shell.light .code-example strong,
+.code-practice-shell.light .code-sample-cases strong,
+.code-practice-shell.light .code-editor-note strong {
+  color: #1b2b42;
+}
+
+.code-practice-shell.light .code-practice-brand small,
+.code-practice-shell.light .code-practice-status,
+.code-practice-shell.light .difficulty-tabs button,
+.code-practice-shell.light .code-panel-tabs button,
+.code-practice-shell.light .code-results-tabs button,
+.code-practice-shell.light .code-question-select,
+.code-practice-shell.light .code-editor-toolbar label,
+.code-practice-shell.light .code-editor-toolbar button,
+.code-practice-shell.light .code-library-bar > button {
+  color: #708198;
+}
+
+.code-practice-shell.light .code-back-to-questions,
+.code-practice-shell.light .code-theme-toggle {
+  border-color: #dce7f3;
+  background: #f8fbff;
+  color: #42617f;
+}
+
+.code-practice-shell.light .code-back-to-questions:hover,
+.code-practice-shell.light .code-theme-toggle:hover {
+  border-color: #aacbec;
+  color: #2867a9;
+}
+
+.code-practice-shell.light .difficulty-tabs button.active,
+.code-practice-shell.light .code-panel-tabs button.selected,
+.code-practice-shell.light .code-results-tabs button.selected {
+  background: #edf6ff;
+  color: #2867a9;
+}
+
+.code-practice-shell.light .difficulty-tabs button span {
+  background: #f0f5fb;
+  color: #6b7f96;
+}
+
+.code-practice-shell.light .code-question-select select,
+.code-practice-shell.light .code-editor-toolbar select {
+  color: #253850;
+}
+
+.code-practice-shell.light .code-question-select option,
+.code-practice-shell.light .code-editor-toolbar option {
+  background: #fff;
+}
+
+.code-practice-shell.light .code-practice-workspace,
+.code-practice-shell.light .code-problem-panel {
+  border-color: #e2eaf4;
+}
+
+.code-practice-shell.light .code-problem-panel,
+.code-practice-shell.light .code-results-panel,
+.code-practice-shell.light .code-editor-panel {
+  background: #fff;
+}
+
+.code-practice-shell.light .code-topic-list span,
+.code-practice-shell.light .code-problem-content > p code {
+  background: #eef4fa;
+  color: #526981;
+}
+
+.code-practice-shell.light .code-problem-content > p,
+.code-practice-shell.light .code-editor-note p {
+  color: #53677f;
+}
+
+.code-practice-shell.light .code-example,
+.code-practice-shell.light .code-editor-note,
+.code-practice-shell.light .code-test-result pre {
+  border-color: #e2eaf4;
+  background: #f8fbff;
+}
+
+.code-practice-shell.light .code-example pre,
+.code-practice-shell.light .code-sample-cases code,
+.code-practice-shell.light .code-test-result pre {
+  color: #344a63;
+}
+
+.code-practice-shell.light .code-library-chips span,
+.code-practice-shell.light .code-sample-cases > div,
+.code-practice-shell.light .code-test-result {
+  border-color: #e2eaf4;
+  color: #53677f;
+}
+
+.code-practice-shell.light .code-results-header > span,
+.code-practice-shell.light .code-action-bar > span,
+.code-practice-shell.light .code-sample-cases > div > span,
+.code-practice-shell.light .code-results-placeholder {
+  color: #74869c;
+}
+
+.code-practice-shell.light .code-action-bar button {
+  border-color: #dce7f3;
+  background: #f8fbff;
+  color: #42617f;
+}
+
+.code-practice-shell.light .code-action-bar .code-submit-button {
+  border-color: #397ac4;
+  background: #397ac4;
+  color: #fff;
+}
+
+.code-practice-shell.light .code-action-bar .code-submit-button:hover {
+  border-color: #2f69ad;
+  background: #2f69ad;
+}
+
+.code-practice-shell.light .code-verdict.accepted {
+  background: #e7f8ef;
+  color: #13824e;
+}
+
+.code-practice-shell.light .code-verdict.failed {
+  background: #ffebed;
+  color: #b83245;
+}
+
+.code-practice-shell.light .code-test-result .failed,
+.code-practice-shell.light .code-test-result > strong,
+.code-practice-shell.light .code-execution-error {
+  color: #b83245;
+}
+
+@media (max-width: 850px) {
+  .code-practice-shell.light .code-practice-header {
+    padding: 10px 14px;
+  }
+
+  .code-practice-workspace {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .code-problem-panel {
+    flex: 0 0 44vh;
+    min-height: 0;
+    max-height: 44vh;
+  }
+
+  .code-editor-panel {
+    flex: 0 0 auto;
+  }
+}
+
+.code-practice-shell,
+.code-practice-shell * {
+  scrollbar-color: #c3cfdd transparent;
+  scrollbar-width: thin;
+}
+
+.code-practice-shell::-webkit-scrollbar,
+.code-practice-shell *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.code-practice-shell::-webkit-scrollbar-track,
+.code-practice-shell *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-practice-shell::-webkit-scrollbar-thumb,
+.code-practice-shell *::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: #c3cfdd;
+  background-clip: content-box;
+}
+
+.code-practice-shell::-webkit-scrollbar-thumb:hover,
+.code-practice-shell *::-webkit-scrollbar-thumb:hover {
+  background: #91a4ba;
+  background-clip: content-box;
+}
+
+.code-practice-shell:not(.light),
+.code-practice-shell:not(.light) * {
+  scrollbar-color: #475569 transparent;
+}
+
+.code-practice-shell:not(.light)::-webkit-scrollbar-thumb,
+.code-practice-shell:not(.light) *::-webkit-scrollbar-thumb {
+  background: #475569;
+  background-clip: content-box;
+}
+
+.code-practice-shell:not(.light)::-webkit-scrollbar-thumb:hover,
+.code-practice-shell:not(.light) *::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+  background-clip: content-box;
+}
