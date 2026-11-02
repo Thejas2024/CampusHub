@@ -53,4 +53,14 @@ Developed as a student-focused web application to enhance campus management and 
 
 **Images**
 <img width="1518" height="717" alt="image" src="https://github.com/user-attachments/assets/96fac263-38aa-4116-a679-6f771790403f" />
+<img width="1508" height="707" alt="image" src="https://github.com/user-attachments/assets/04670589-5bc4-41af-8822-65e1fa134f60" />
+<img width="1525" height="738" alt="image" src="https://github.com/user-attachments/assets/6d3e9645-5d74-48f1-b8da-254cd88c5538" />
+<img width="1530" height="725" alt="image" src="https://github.com/user-attachments/assets/3458bdd6-c0df-4a37-9e29-1493fa521d86" />
+<img width="1515" height="730" alt="image" src="https://github.com/user-attachments/assets/c1d34420-bde6-4086-a10e-86e12ead0095" />
+<img width="1528" height="726" alt="image" src="https://github.com/user-attachments/assets/b5016a17-c5c8-439f-9d49-77cb1686bbbc" />
+
+
+
+
+
 
